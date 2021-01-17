@@ -1,0 +1,84 @@
+$SHADOW_BUTTON: 0rem 0.35rem 0.5rem -0.6rem;
+
+:root {
+    --HEADER-HEIGHT: 38px;
+    // --HEADER-HEIGHT: 50vh;
+    --A1: #ffffff;
+    --A2: #eeeeee;
+    --A3: #dddddd;
+    --A4: #cccccc;
+    --A5: #bbbbbb;
+    --A6: #aaaaaa;
+    --A7: #999999;
+    --A8: #888888;
+    --A9: #777777;
+    --A10: #666666;
+    --A11: #555555;
+    --A12: #444444;
+    --A13: #333333;
+    --A14: #222222;
+    --A15: #111111;
+    --A16: #000000;
+
+    --geist-pp-color: #00ff7f;
+    --accents-1: var(--A2);
+    --accents-2: var(--A4);
+    --accents-3: var(--A4);
+    --accents-4: var(--A8);
+    --accents-5: var(--A10);
+    --accents-6: var(--A12);
+    --accents-7: var(--A14);
+    --accents-8: var(--A16);
+
+    --blur-bg: rgb(225 225 225 / 27.5%);
+    --aside-width: 260px;
+    --aside-shadow: inset -0.5rem 0 1rem -1rem var(--accents-2);
+    --header-height: var(--HEADER-HEIGHT);
+    --shadow-sticky: 0 0.5rem 1rem -1rem var(--accents-8);
+    --shadow-inset: inset 0 -0.5rem 1rem -1rem var(--A10);
+    --shadow-button: #{$SHADOW_BUTTON} var(--A10);
+    --geist-bezier-transition: 300ms cubic-bezier(1, 0, 0, 1);
+
+    --footer-height: 1.3rem;
+    --tab-header-height: 44px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accents-1: var(--A2);
+        --accents-2: var(--A4);
+        --accents-3: var(--A6);
+        --accents-4: var(--A8);
+        --accents-5: var(--A10);
+        --accents-6: var(--A12);
+        --accents-7: var(--A14);
+        --accents-8: var(--A16);
+
+        --geist-pp-color: #00ff7f;
+
+        --shadow-sticky: 0 0.5rem 1rem -1rem var(--A10);
+        --shadow-inset: inset 0 -0.5rem 1rem -1.25rem var(--A10);
+        --shadow-button: #{$SHADOW_BUTTON} var(--A10);
+        --blur-bg: rgb(225 225 225 / 27.5%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accents-1: var(--A15);
+        --accents-2: var(--A14);
+        --accents-3: var(--A12);
+        --accents-4: var(--A9);
+        --accents-5: var(--A7);
+        --accents-6: var(--A5);
+        --accents-7: var(--A3);
+        --accents-8: var(--A1);
+
+        --geist-pp-color: #447c60;
+
+        --shadow-sticky: 0 0.5rem 1rem -1rem var(--A16);
+        --shadow-inset: inset 0 -0.5rem 1rem 0rem var(--A16);
+        --shadow-button: #{$SHADOW_BUTTON} var(--A16);
+        --blur-bg: rgb(10 10 10 / 27.5%);
+    }
+}

@@ -1,0 +1,26 @@
+@mixin splashButton {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        // background-color: var(--geist-pp-color);
+        background-color: var(--accents-4);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-200%, -50%) scale(4);
+        opacity: 0;
+        filter: blur(2px);
+        transition: all 300ms ease-in-out;
+    }
+    &:active {
+        &::after {
+            transform: translate(100%, -50%) scale(1);
+            opacity: 1;
+            transition: 0s;
+        }
+    }
+}

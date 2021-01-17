@@ -1,0 +1,47 @@
+@import "styles/mixin.scss";
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 10rem;
+    font-family: var(--font-brand);
+    font-weight: bold;
+    line-height: 1;
+    // background: linear-gradient(to right, #7928ca 20%, #ff0080 40%, #7928ca 60%, #ff0080 80%, #7928ca 100%);
+    background: linear-gradient(45deg, var(--accents-8), #ff0080);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 10s linear 0s infinite;
+}
+
+.button {
+    height: 2rem;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--accents-6);
+    background: linear-gradient(45deg, #7928ca, #ff0080);
+    // animation: hue 3s linear 0s infinite;
+    color: var(--accents-8);
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0 0.5rem;
+    outline: none;
+    cursor: pointer;
+
+    @include splashButton();
+}
+
+@keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
