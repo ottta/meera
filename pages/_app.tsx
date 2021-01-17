@@ -1,4 +1,3 @@
-import "styles/FHPhemister.scss";
 import "styles/fonts.scss";
 import "styles/global.scss";
 import { AppProps } from "next/app";
